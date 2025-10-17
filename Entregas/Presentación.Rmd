@@ -1,0 +1,68 @@
+---
+title: "Presentación"
+output: html_document
+date: "2025-10-17"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+## Introducción
+
+El proyecto de investigación busca analizar la relación que puede existir entre el nivel educacional promedio de las comunas chilenas y los resultados electorales obtenidos en los plebiscitos constitucionales de salida realizados en 2022 y 2023. Ambos plebiscitos fueron instancias de voto obligatorio, lo cual podría permitir observar el comportamiento electoral de sectores históricamente menos movilizados. De manera específica, se busca responder la pregunta: ¿Cómo se relaciona el nivel educacional de las comunas con los resultados de votos en los plebiscitos de salida 2022-2023 en Chile? Indagando la pregunta, podríamos observar en qué medida el nivel educativo se relaciona en la orientación del voto en procesos políticos de alta relevancia, contribuyendo a comprender cómo factores socioeducativos moldean el comportamiento electoral en Chile. 
+
+## Marco Teórico
+
+Dentro del estudio del comportamiento electoral, las variables socioeconómicas pueden tener efectos importantes al respecto. Autores clásicos como Wolfinger y Rosenstone (1980) ya decían que factores como la educación era de los principales que afectaban la participación electoral, agregando su impacto en otros niveles como ingreso, lugar de residencia, etc. Así, estudios en Latinoamérica se han centrado en como el lugar de residencia influye en el comportamiento electoral, describiendo que en zonas urbanas tienden a votar menos en comparación a otras (Carreras y Castañeda-Angaritas, 2014). Mientras en Chile, se tiende a que los distritos urbanos con mayor concentración de ingresos votan más que los distritos urbanos pobres (Brieba y Bunker, 2019). Esto abre la puerta al análisis del comportamiento electoral chileno a partir de otras características socioeconómicas importantes como la educación.
+
+Sumado a todo lo anterior, Chile presentaba un debate sobre el comportamiento electoral, especialmente por los niveles de participación. La reforma del año 2012 generó un descenso en los porcentajes de participación, promediando alrededor de un 48% en elecciones presidenciales desde la reforma al 2021 (Intenational IDEA, s.f.). No solo eso, Brieba y Bunker (2019) analizan los efectos de la reforma en el electorado chileno, mostrando un descenso efectivo en la participación electoral y un aumento en el sesgo de clase al momento de votar, especialmente en distritos urbanos.
+
+Ante esto, los procesos constitucionales vividos en 2022 y 2023 permitieron no solo la posibilidad de elección de una nueva carta magna, sino que también permitió observar el comportamiento electoral de un gran número de personas que se abstenían de votar, puesto que, en ambos procesos, se contaba con un Plebiscito de salida con voto obligatorio. Ante esto, ambos plebiscitos implicaron la movilización de un nuevo electorado, pero se destaca la entrada de un electorado que tienen menor nivel educacional (Chuaqui et al., 2023). Es por esto, que el análisis presentado cobra interés, ya que ambos procesos se realizaron con un electorado similar, pero con un resultado diferente en ambos.
+
+## Selección y descripción de bases de datos
+
+3 bases de datos:
+1.	Resultados-Plebiscito-Constitución-Política 2022 (Entregada por la profesora)
+2.	Resultados-Plebiscito-Constitución-Política 2023 (Entregada por la profesora)
+3.	Base de datos Censo 2024 INE - características educativas 
+
+Variables.	
+A) Variable independiente: Nivel educacional (categóricas)
+0.	Nunca Asistió (N/A)
+1.	Básica (8 años)
+2.	Media (12 años)
+3.	Superior (13 o más)
+ii.	B) Variable independiente: Nivel educacional (Años de escolaridad <18 años)
+a.	5.8 años - 16.7 años
+
+B)Resultado del voto comunal en los plebiscitos de salida (2022 y 2023) (Dependiente)
+1.	Plebiscito 2022
+a.	% de votos Apruebo 
+b.	% de votos Rechazo
+2.	Plebiscito 2023
+a.	% de votos A favor 
+b.	% de votos En contra
+
+Se planea observar como la variable de nivel educacional promedio en la comuna, influye en el comportamiento del electorado al momento del voto de salida de 2022 y 2023. Esto debido a que cada proceso además de ser voto obligatorio, fue presentado y manejado desde distintos espectros político.
+
+## Unidad de análisis
+
+Cada comuna constituye un caso de observación en el cual se analizan dos dimensiones: el nivel educacional promedio de su población y los resultados electorales obtenidos en los plebiscitos constitucionales de salida de 2022 y 2023.
+
+La elección de la comuna como unidad de análisis es apropiada porque permite observar la relación entre variables socioeducativas y comportamiento electoral en un nivel territorial que combina tanto homogeneidad interna como comparabilidad entre casos. Además, nos permite un acceso más cercano en cuanto a comportamiento político, entendido a lo más cercano del electorado.
+
+Analizar a nivel comunal, y no individual, es pertinente para captar patrones territoriales de comportamiento político y desigualdades estructurales asociadas al nivel educacional. Esta escala intermedia permite identificar cómo factores socioeducativos locales influyen en los resultados electorales sin reducir el análisis a casos aislados ni a promedios nacionales excesivamente agregados
+
+## Pasos a seguir
+
+a.	Limpiar base INE
+b.	Unir las bases
+c.	Agregar posibles variables de interés (edad, ingreso, etc.)
+d.	Regresiones
+Adicionalmente:
+- Se espera que mencionen la metodología a utilizar para el análisis de datos en R.
+- Método cuantitativo, análisis descriptivo debido a que el objetivo de la investigación será observar si se presenta una correlación entre la variable educación con plebiscito de salida 2022 y 2023.
+- Uso de bases de datos con filtración en variables relevantes (nivel educacional promedio) e implementación de los porcentajes en resultados de plebiscito de salida 2022 y 2023 para el desarrollo de una nueva tabla comparativa.
